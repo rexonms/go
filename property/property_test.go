@@ -3,20 +3,27 @@ package property
 import "testing"
 
 func TestGetBathRoomCount(t *testing.T) {
-	responseA := GetBathRoomCount(1,0);
-	if responseA != 1 {
-		t.Errorf("Expected 1 but got %v", responseA)
+	gotA := GetBathRoomCount(1,0)
+	wantA := float32(1)
+	if gotA != wantA {
+		t.Errorf("A GetBathRoomCount(): got %v, want %v", gotA, wantA)
 	}
-	responseB := GetBathRoomCount(2,1);
-	if responseB != 2.5 {
-		t.Errorf("Expected 2.5 but got %v", responseB)
+
+	gotB := GetBathRoomCount(2,1)
+	wantB := float32(2.5)
+	if gotB != wantB {
+		t.Errorf("B GetBathRoomCount(): got %v, want %v", gotB, wantB)
 	}
-	responseC := GetBathRoomCount(2,0);
-	if responseC != 2 {
-		t.Errorf("Expected 2 but got %v", responseC)
+
+	gotC := GetBathRoomCount(2,0)
+	wantC := float32(2)
+	if gotC != wantC {
+		t.Errorf("C GetBathRoomCount(): got %v, want %v", gotC, wantC)
 	}
-	responseD := GetBathRoomCount(0,0);
-	if responseD != 0 {
-		t.Errorf("Expected 0 but got %v", responseD)
+
+	gotD := GetBathRoomCount(0,0)
+	wantD := float32(0)
+	if gotD != wantD {
+		t.Errorf("D GetBathRoomCount(): got %v, want %v", gotD, wantD)
 	}
 }
